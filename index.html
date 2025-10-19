@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .progress-container {
+        width: 100%;
+        max-width: 500px;
+        margin: 10px 0;
+        display: none;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 24px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 0.3s ease;
+        width: 0%;
+      }
+
+      .progress-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>PDF Outline Analyzer</h1>
+      <p>
+        <input id="pdf-input" type="file" accept="application/pdf" />
+      </p>
+      <div id="progress-container" class="progress-container">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+          <div id="progress-text" class="progress-text">0%</div>
+        </div>
+      </div>
+      <p id="status">No file selected.</p>
+      <a
+        id="outline-download"
+        href="#"
+        download="outline.pdf"
+        style="display: none"
+        >Download outline PDF</a
+      >
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
