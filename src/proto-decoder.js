@@ -149,7 +149,7 @@ class ProtoDecoderManager {
         });
       })();
     </script>
-    <script src="/lib/reader-compiled.js" onload="window.parent.postMessage({ type: 'proto_ready', hasQp: typeof window.Qp === 'function' }, '*')"></script>
+    <script src="lib/reader-compiled.js" onload="window.parent.postMessage({ type: 'proto_ready', hasQp: typeof window.Qp === 'function' }, '*')"></script>
   </head>
   <body></body>
 </html>`;
