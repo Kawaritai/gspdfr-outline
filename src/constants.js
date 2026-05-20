@@ -2,8 +2,8 @@
  * Central location for loader/analyzer message identifiers and runtime flags
  * shared across the extension’s modules.
  */
-export const ANALYZER_SOURCE = "../lib/analyzer_worker_bin.js";
-export const LOADER_SOURCE = "../lib/pdf_loader_iframe.html";
+export const ANALYZER_SOURCE = new URL("../lib/analyzer_worker_bin.js", import.meta.url).href;
+export const LOADER_SOURCE = new URL("../lib/pdf_loader_iframe.html", import.meta.url).href;
 export const DEBUG = false;
 
 // Message type constants for loader messages
